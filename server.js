@@ -10,7 +10,7 @@ const io = new IOServer(httpServer)
 // middleware para archivos estáticos:
 app.use(express.static('./public'))
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 const messages = [
     {author: 'Blixa', text: 'This is the weeping song'},
